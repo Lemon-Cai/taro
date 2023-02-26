@@ -1,0 +1,101 @@
+.fuzzy-query {
+  .at-list::after {
+    border-top: 0;
+  }
+  .fuzzy-query-pop {
+    // border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    z-index: 100;
+    width: 100%;
+    background: #fff;
+    // opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    .at-list__item {
+      padding: 20px;
+      font-size: 28px;
+    }
+    .at-list__item::after {
+      left: 0;
+    }
+  }
+  .show-fuzzy-pop {
+    max-height: 800px;
+
+    z-index: 100;
+    // overflow-y: scroll;
+  }
+  .input-wrap {
+    margin-left: 32px;
+
+    color: #333;
+    font-size: 28px;
+    .input-item {
+      position: relative;
+      padding: 24px 0;
+      &::after {
+        content: '';
+        position: absolute;
+        -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+        transform-origin: center;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        pointer-events: none;
+        top: -50%;
+        left: -50%;
+        right: -50%;
+        bottom: -50%;
+        border: 0 solid #d6e4ef;
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+        border-bottom-width: 1px;
+      }
+    }
+    .input_title {
+      width: 172px;
+      margin-right: 16px;
+    }
+    .search-input-wrap {
+      width: calc(100% - 172px);
+      position: relative;
+      .fuzzy-clear {
+        position: absolute;
+        right: 0;
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .search-input-show-clear {
+      width: 480.12px;
+      position: relative;
+      .fuzzy-clear {
+        position: absolute;
+        right: 0;
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    input::-webkit-input-placeholder {
+      color: rgb(204, 204, 204);
+    }
+
+    input::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: rgb(204, 204, 204);
+    }
+
+    input:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: rgb(204, 204, 204);
+    }
+
+    input:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: rgb(204, 204, 204);
+    }
+  }
+}

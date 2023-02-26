@@ -36,6 +36,10 @@
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
+    "@linaria/babel-preset": "^4.4.1",
+    "@linaria/core": "^4.2.6",
+    "@linaria/react": "^4.3.4",
+    "@linaria/webpack-loader": "^4.1.13",
     "@tarojs/components": "3.5.5",
     "@tarojs/helper": "3.5.5",
     "@tarojs/plugin-framework-react": "3.5.5",
@@ -52,8 +56,10 @@
     "@tarojs/shared": "3.5.5",
     "@tarojs/taro": "3.5.5",
     "@tarojs/taro-h5": "3.5.5",
+    "classnames": "^2.3.2",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "taro-ui": "^2.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.8.0",

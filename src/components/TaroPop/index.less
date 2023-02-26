@@ -1,0 +1,37 @@
+.popup__ui_mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1999;
+}
+
+.popup__ui_main {
+  z-index: 2000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  min-height: 255px;
+  max-height: 75%;
+  background-color: #fff;
+  transition: transform .3s;
+  padding: 0 calc(24px + env(safe-area-inset-right)) env(safe-area-inset-bottom) calc(24px + env(safe-area-inset-left));
+}
+
+.popup__ui_child {
+  .popup__ui_title {
+
+  }
+  .popup__ui_content {
+
+  }
+  .popup__ui_footer {
+
+  }
+}

@@ -1,3 +1,11 @@
+/*
+ * @Author: CaiPeng
+ * @Date: 2022-09-14 15:37:31
+ * @LastEditors: caipeng
+ * @LastEditTime: 2023-02-09 10:36:29
+ * @FilePath: \React\Taro\myTaroApp\config\index.js
+ * @Description: 
+ */
 import path from 'path'
 
 const config = {
@@ -77,7 +85,15 @@ const config = {
       }
     },
     // 自定义 Webpack 配置
-    webpackChain(chain, webpack) {}
+    webpackChain(chain, webpack) {
+      chain.module
+        .rule('script')
+        .use('linariaLoader')
+        .loader('@linaria/webpack-loader')
+        .options({
+          sourceMap: process.env.NODE_ENV !== 'production',
+        })
+    }
   },
   h5: {
     publicPath: '/',
@@ -96,7 +112,15 @@ const config = {
       }
     },
     // 自定义 Webpack 配置
-    webpackChain(chain, webpack) {},
+    webpackChain(chain, webpack) {
+      chain.module
+        .rule('script')
+        .use('linariaLoader')
+        .loader('@linaria/webpack-loader')
+        .options({
+          sourceMap: process.env.NODE_ENV !== 'production',
+        })
+    },
     // webpack 的 devServer 配置
     devServer: {
       port: 8899
