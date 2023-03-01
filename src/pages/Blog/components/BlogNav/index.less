@@ -1,0 +1,207 @@
+@import '@/assets/style/base/fn';
+
+.wq-navtab {
+  z-index: 1;
+  display: flex;
+  background-color: #fff;
+  .wq-navtab-tab {
+    position: relative;
+    display: flex;
+    color: #333;
+    background-color: #fff;
+    z-index: 2;
+    &:after {
+      .setBottomLine(#e0e0e0);
+    }
+    .wq-navtab-tab-item {
+      height: 40px;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      flex: 1;
+      li {
+        padding: 0 11px;
+        display: inline-block;
+        position: relative;
+        height: inherit;
+        font-size: 15px;
+        color: #333;
+        span {
+          height: inherit;
+          display: flex;
+          align-items: center;
+          color: #666;
+        }
+        &.wq-navtab-current {
+          span {
+            color: #ff9008;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .wq-navtab-toggle {
+    position: relative;
+    width: 36px;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+      content: " ";
+      .setArrow(down, 9px, #666, 1px);
+    }
+    &.wq-navtab-toggle-active {
+      &:after {
+        transform: rotate(-45deg);
+        top: 3px;
+      }
+    }
+  }
+  .wq-navtab-network {
+    background-color: #ffdedf;
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    padding: 12px;
+    .wq-icon {
+      color: #fb5b04;
+      margin-right: 12px;
+      vertical-align: top;
+    }
+  }
+  .wq-navtab-unfold {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 2;
+    transform: translate(0, -100%);
+    transition: all .08s linear;
+    display: flex;
+    flex-direction: column;
+    &.wq-navtab-unfold-active {
+      background-color: #fff;
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    .wq-navtab-header {
+      position: relative;
+      align-items: center;
+      display: flex;
+      height: 40px;
+      .wq-navtab-title {
+        flex: 1;
+        font-size: 14px;
+        color: #101010;
+        padding-left: 15px;
+      }
+    }
+    .wq-navtab-body {
+      font-size: 0;
+      .wq-navtab-panel {
+        pointer-events: auto;
+        overflow: hidden;
+        padding: 0 7.5px;
+        margin: 2.5px 0 12.5px 0;
+        box-sizing: border-box;
+        .wq-navtab-item {
+          position: relative;
+          float: left;
+          width: 33.333%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding: 7.5px;
+          box-sizing: border-box;
+          .wq-icon-clear {
+            position: absolute;
+            top: -2px;
+            right: 1px;
+            color: #c1c1c1;
+            display: none;
+          }
+          &.wq-navtab-item-empty {
+            width: 100%;
+            font-size: 14px;
+            color: #808080;
+            text-align: center;
+          }
+        }
+        &.wq-navtab-selected-panel {
+          .wq-navtab-editable {
+            .wq-icon-clear {
+              display: block;
+            }
+          }
+        }
+        &.wq-navtab-unselected-panel {
+          .wq-navtab-editable {
+            .wq-icon-clear {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .wq-navtab-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.wq-navtab-badge, .wq-navtab-switch {
+  position: relative;
+  color: #101010;
+  background-color: #f6f6f6;
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 30px;
+  height: 29px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  padding: 0 5px;
+  box-sizing: border-box;
+  &:after {
+    position: absolute;
+    content: " ";
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 0;
+    border: 1px solid #ccc;
+    transform: scale(.5);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    z-index: 1;
+  }
+}
+
+.wq-navtab-switch {
+  color: #ff9008;
+  background-color: #fff;
+  width: auto;
+  font-size: 12px;
+  border-radius: 20px;
+  margin: 0 10px 0 0;
+  padding: 0 18px;
+  height: 22px;
+  line-height: 22px;
+  &:after {
+    border-color: #ff9008;
+    border-radius: 22px;
+  }
+}
+
+.wq-navtab-notify {
+  position: relative;
+}

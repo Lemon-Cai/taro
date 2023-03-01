@@ -1,0 +1,55 @@
+.qince-checkbox {
+  position: absolute;
+  left: -99999px;
+  &[checked] {
+    & + .qince-icon-selected {
+      line-height: 24px;
+      font-size: 24px;
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      &::before {
+        content: ' ';
+        position: absolute;
+        width: 14px;
+        height: 8px;
+        background: transparent;
+        top: 0;
+        bottom: 0px;
+        left: 50%;
+        right: 0px;
+        border: 2px solid #ff9008;
+        border-top: none;
+        border-right: none;
+        transform: rotate(-55deg) translate(-50%, -50%);
+        z-index: 9;
+      }
+    }
+  }
+}
+
+.qince-cell {
+  font-size: 16px;
+  line-height: 1.5713;
+  &_hd {
+    margin-bottom: 4px;
+    color: #808080;
+    .required {
+      position: relative;
+      &::before {
+        content: '*';
+        position: absolute;
+        left: -8px;
+        top: 0;
+        color: #fa0000;
+      }
+    }
+  }
+  &_bd {
+    display: flex;
+    .placeholder {
+      color: #cccccc;
+    }
+  }
+}

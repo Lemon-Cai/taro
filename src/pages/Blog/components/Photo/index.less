@@ -1,0 +1,101 @@
+@import '@/assets/style/base/fn';
+@import "@/assets/style/1px";
+  
+  .wq-blog-photos {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+    .wq-blog-photo {
+      position: relative;
+      float: left;
+      margin-right: @weuiUploaderFileSpacing;
+      width: @weuiUploaderSize;
+      height: @weuiUploaderSize;
+      background: no-repeat center center;
+      background-size: cover;
+      &:before {
+        .setLine();
+      }
+      .wq-blog-photo-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        background: #000;
+        top: 0;
+      }
+      .wq-blog-photo-length {
+        position: absolute;
+        width: 100%;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+        line-height: 78px;
+        top: 0;
+      }
+    }
+    .qince-icon-clear {
+      position: absolute;
+      left: -8px;
+      top: -16px;
+      color: #f66;
+      font-size: 20px;
+    }
+  }
+
+  .setLine(@c: #e5e5e5) {
+    content: " ";
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 1px;
+    border: 1px solid @c;
+    color: @c;
+    height: 200%;
+    transform-origin: left top;
+    transform: scale(0.5);
+    background-clip: padding-box;
+    box-sizing: border-box;
+  }
+  
+  .wq-uploader-btn-wrap {
+    float:left;
+    position: relative;
+    margin-right:8px;
+    margin-bottom: 8px;
+    width: 78px;
+    height: 78px;
+    &:before {
+      .setLine();
+      border-style: dashed;
+    }
+    .wq-uploader-btn {
+      position: relative;
+      width: 78px;
+      height: 78px;
+      &:before, &:after{
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #c3c3c7;
+      }
+      &:before {
+        width: 2px;
+        height: 36px;
+      }
+      &:after {
+        width: 36px;
+        height: 2px;
+      }
+    }
+  }

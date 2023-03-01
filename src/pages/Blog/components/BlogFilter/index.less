@@ -1,0 +1,107 @@
+.wq-header {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  z-index: 5;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    transform-origin: 0 100%;
+    transform: scaleY(0.5);
+    pointer-events: none;
+  }
+  &-left,
+  &-right {
+    flex: 0 0 60px;
+    color: #333;
+  }
+  .wq-header-left text {
+    margin-left: 15px;
+  }
+  &-title {
+    flex: 1;
+    position: relative;
+    padding: 0;
+    line-height: 44px;
+    text-align: center;
+    height: 44px;
+    font-size: 17px;
+    font-weight: 400;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+  }
+}
+.form-content {
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  padding-bottom: calc(50px ~"+ constant(safe-area-inset-bottom)");
+  padding-bottom: calc(50px ~"+ env(safe-area-inset-bottom)");
+  overflow: auto;
+}
+
+.form-footer {
+  position: absolute;
+  bottom: 0;
+  bottom: constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom);
+  display: flex;
+  left: 0;
+  right: 0;
+  align-items: center;
+  line-height: 50px;
+  z-index: 8;
+  background-color: #f7f7f7;
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #e0e0e0;
+    color: #e0e0e0;
+    transform-origin: 0 0;
+    transform: scaleY(0.5);
+    pointer-events: none;
+  }
+  .btn {
+    position: relative;
+    display: block;
+    flex: 1;
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 16px;
+  }
+  .confirm {
+    color: #fff;
+    background-color: #ff9008;
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      bottom: 0;
+      border-left: 1px solid #d9d9d9;
+      color: #d9d9d9;
+      transform-origin: 0 0;
+      transform: scaleX(0.5);
+      pointer-events: none;
+    }
+  }
+}

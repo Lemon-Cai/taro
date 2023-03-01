@@ -1,0 +1,45 @@
+
+.wq-cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  &::before {
+    left: 61px;
+  }
+}
+
+.wq-media-title {
+  flex: 1;
+  line-height: 38px;
+  color: #333;
+}
+.wq-media-thumb {
+  width: 38px;
+  height: 38px;
+  vertical-align: -7px;
+  margin-right: 8px;
+}
+
+.wq-cell-ft {
+  position: relative;
+  padding-right: 15px;
+  text-align: right;
+  color: #808080;
+  &::after {
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 1px 1px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -4px;
+  }
+}

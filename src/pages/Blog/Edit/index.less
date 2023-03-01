@@ -1,0 +1,79 @@
+.qince-blog-form {
+  background-color: #fff;
+  font-size: 0;
+  .weui-cells {
+    margin-top: 0;
+    &:before {
+      display: none;
+    }
+  }
+  .wq-blog-time {
+    flex-basis: 100px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    font-size: 12px;
+    color: #bdbdbd;
+    text-align: right;
+  }
+  .wq-blog-location {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: #f0f1f1;
+    border-radius: 12px;
+    color: #808080;
+    padding: 0 10px 0 5px;
+    font-size: 13px;
+    line-height: 1.52;
+    .qince-icon {
+      font-size: 14px;
+      vertical-align: 0;
+    }
+    .qince-icon-location {
+      color: #999;
+      margin-right: 4px;
+    }
+    .qince-icon-clear {
+      color: #b7b7b7;
+      margin-left: 12px;
+    }
+    .wq-blog-address {
+      padding: 6px 0;
+      // .ellipsis()
+    }
+    &.active {
+      padding-right: 10px;
+      .wq-icon-location, .wq-blog-address {
+        color: #0275d8;
+      }
+    }
+  }
+}
+
+.qince-blog-footer {
+  width: 100%;
+  background-color: #f7f7f7;
+  .qince-blog-footer-btns {
+    display: flex;
+    height: 100%;
+    padding: 0;
+    .qince-blog-footer-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      .qince-icon {
+        font-size: 24px;
+        color: #808080;
+      }
+    }
+  }
+  .qince-blog-submit {
+    font-size: 16px;
+    color: #bdbdbd;
+    padding: 12px 15px;
+    &.qince-blog-submit-active {
+      color: #ff9008;
+    }
+  }
+}
