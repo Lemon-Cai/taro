@@ -2,8 +2,8 @@
  * @Author: CaiPeng
  * @Date: 2022-09-14 15:37:31
  * @LastEditors: caipeng
- * @LastEditTime: 2023-02-23 20:21:12
- * @FilePath: \React\Taro\myTaroApp\src\pages\home\index.jsx
+ * @LastEditTime: 2023-03-01 13:30:40
+ * @FilePath: \React\Taro\taro\src\pages\home\index.jsx
  * @Description: 
  */
 import Taro from '@tarojs/taro'
@@ -16,7 +16,6 @@ import TaroPop from '@/components/TaroPop'
 import FilterDropdown from '@/components/filterDropdown'
 // import FuzzyQuery from '@/components/FuzzyQuery'
 import Drag from '@/components/drag'
-import Comment from '@/components/Comment'
 
 import './index.less'
 import data from '../../mock/data'
