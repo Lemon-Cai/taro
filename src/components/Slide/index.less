@@ -1,0 +1,65 @@
+/* 可移动部分样式 */
+movable-area {
+  width: 100%; 
+}
+.container,
+movable-view {
+  box-sizing: border-box;
+  width: 750rpx;
+  height: 200rpx;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+movable-view {
+  z-index: 5; 
+  padding: 10rpx;
+  overflow: hidden;
+  background-color: green;
+}
+
+/* 隐藏部分样式 */
+.operations-content {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: left;
+  align-items: center;
+  z-index: 2; 
+  right: 0;
+  width: 100px; /* 隐藏部分的宽度 */
+  height: 200rpx;
+  background-color: #fa0000;
+}
+.operation-button {
+  width: 150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 20rpx;
+  background-color: gray;
+  color: #fff;
+}
+
+/* 卡片样式 */
+.card-container {
+  width: 100%;
+  height: 180rpx;
+  border-radius: 5rpx;
+  font-size: 20px;
+  word-break: break-all;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.show-operations {
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 80rpx;
+}

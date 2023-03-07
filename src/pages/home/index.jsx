@@ -2,7 +2,7 @@
  * @Author: CaiPeng
  * @Date: 2022-09-14 15:37:31
  * @LastEditors: caipeng
- * @LastEditTime: 2023-03-01 13:30:40
+ * @LastEditTime: 2023-03-06 17:36:10
  * @FilePath: \React\Taro\taro\src\pages\home\index.jsx
  * @Description: 
  */
@@ -20,6 +20,7 @@ import Drag from '@/components/drag'
 import './index.less'
 import data from '../../mock/data'
 import Dialog from '@/components/Dialog'
+import Slide from '@/components/Slide'
 
 export default function Home() {
   const [state, setState] = useState({
@@ -324,6 +325,17 @@ export default function Home() {
         <CoverView>
           <View>分级基金</View>
         </CoverView>
+      </View>
+
+      <View className='section'>
+        <View>左滑删除示例</View>
+        {
+          state.list.map(item => (
+            <Slide 
+              field={item}
+            />
+          ))
+        }
       </View>
     </View>
   )
