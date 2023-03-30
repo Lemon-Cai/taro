@@ -2,13 +2,15 @@
  * @Author: CaiPeng
  * @Date: 2023-02-09 09:13:49
  * @LastEditors: caipeng
- * @LastEditTime: 2023-02-09 13:24:28
- * @FilePath: \React\Taro\myTaroApp\src\pages\report\index.jsx
+ * @LastEditTime: 2023-03-21 17:52:15
+ * @FilePath: \React\Taro\taro\src\pages\report\index.jsx
  * @Description: 
  */
 import Taro from '@tarojs/taro'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { View, Text, Button } from '@tarojs/components'
+import Bridge from '@/utils/Bridge'
+
 import './index.less'
 
 export default function Home() {
@@ -16,6 +18,9 @@ export default function Home() {
     html: `<h1 style="color: red">Wallace is way taller than other reporters.</h1>`
   })
 
+  useEffect(() => {
+    Bridge.injectScript()
+  }, [])
   const handleGo = () => {
     Taro.navigateTo({
       url: '/pages/subPages/analysis/index?id=1',

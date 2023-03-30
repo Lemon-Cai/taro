@@ -2,8 +2,8 @@
  * @Author: CaiPeng
  * @Date: 2022-09-14 15:37:31
  * @LastEditors: caipeng
- * @LastEditTime: 2023-02-09 10:36:29
- * @FilePath: \React\Taro\myTaroApp\config\index.js
+ * @LastEditTime: 2023-03-30 14:00:43
+ * @FilePath: \React\Taro\taro\config\index.js
  * @Description: 
  */
 import path from 'path'
@@ -11,8 +11,9 @@ import path from 'path'
 const config = {
   projectName: 'myTaroApp',
   date: '2022-9-14',
-  designWidth: 750,
+  designWidth: 375,
   deviceRatio: {
+    375: 2 / 1,
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2
@@ -31,7 +32,7 @@ const config = {
   //     pxtransformBlackList: [/am-/, /demo-/, /^body/]
   //   }]
   // ],
-  plugins: ['@tarojs/plugin-html'],
+  plugins: ['@tarojs/plugin-html'], // '@tarojs/plugin-less', 
   defineConstants: {},
   copy: {
     patterns: [],
@@ -60,13 +61,13 @@ const config = {
       pxtransform: {
         enable: true,
         config: {
-          onePxTransform: true, // 设置 1px 是否需要被转换
-          unitPrecision: 5, // REM 单位允许的小数位。
-          propList: ['*'], // 允许转换的属性。 * : 所有
-          selectorBlackList: [], // 黑名单里的选择器将会被忽略。
-          replace: true, // 直接替换而不是追加一条进行覆盖。
-          mediaQuery: false, // 允许媒体查询里的 px 单位转换
-          minPixelValue: 0 // 设置一个可被转换的最小 px 值
+          // onePxTransform: true, // 设置 1px 是否需要被转换
+          // unitPrecision: 5, // REM 单位允许的小数位。
+          // propList: ['*'], // 允许转换的属性。 * : 所有
+          // selectorBlackList: [], // 黑名单里的选择器将会被忽略。
+          // replace: true, // 直接替换而不是追加一条进行覆盖。
+          // mediaQuery: false, // 允许媒体查询里的 px 单位转换
+          // minPixelValue: 0 // 设置一个可被转换的最小 px 值
         }
       },
       // 小程序端样式引用本地资源内联配置

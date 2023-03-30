@@ -263,9 +263,11 @@ function Drag ({
       setItemWrapHeight(newRows * res.height)
       // eslint-disable-next-line no-undef
       wx.createSelectorQuery().select('.drag-wrapper').boundingClientRect(rese => {
-        const domObj = rese
-        domObj.top += scrollTop
-        setItemWrapDom(domObj)
+        if (rese) {
+          const domObj = rese
+          domObj.top += scrollTop
+          setItemWrapDom(domObj)
+        }
       }).exec()
     }).exec()
   }

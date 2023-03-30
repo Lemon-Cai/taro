@@ -1,0 +1,68 @@
+:host {
+  background: #f7f7f7;
+}
+
+
+.container {
+  width: 100vw;
+}
+
+.area {
+  width: 100%;
+}
+
+
+.item {
+  width: 100%;
+  background: #ffffff;
+}
+
+
+.item-container {
+  margin: 30rpx;
+  background: burlywood;
+}
+
+
+.drag-wrapper {
+  // width: 100%;
+  padding: 12px;
+  background-color: #fff;
+}
+
+
+.drag-item {
+  height: 28px;
+  line-height: 28px;
+  padding: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  view {
+    padding: 0 4px;
+    text-align: center;
+    background-color: #f3f3f3;
+    border-radius: 30px;
+  }
+  .wq-navtab-item {
+    position: relative;
+    float: left;
+    width: 33.333%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+    .wq-icon-clear {
+      position: absolute;
+      top: -2px;
+      right: 1px;
+      color: #c1c1c1;
+    }
+    &.wq-navtab-item-empty {
+      width: 100%;
+      font-size: 14px;
+      color: #808080;
+      text-align: center;
+    }
+  }
+}
